@@ -1,1 +1,19 @@
 Este es un archivo de prueba de conexión GIT
+
+Aprovecho este archivo para recopilar los pasos seguidos para la configuración desde cero.
+
+1.- Instalo en el PC el programa Git Bash (https://git-scm.com/install/windows)
+2.- Creo en la ruta deseada la carpeta que va a contener los archivos o carpetas que voy a versionar (compartir). En mi caso C:\Users\....\Git
+2a.- Se puede crear desde el entorno Windows
+2b.- Se puede crear desde la terminar GitBash de las siguiente forma: Desplazándose por el árbol de carpetas con el comando (cd nombreCarpeta) verificando el contenido de la carpeta actual con el comando (ls -la) creando el directorio deseado con el comando (mkdir nombreCarpetaDeseoCrear)
+3.- Desde el terminar de Git Bash accedo a la ruta de esa carpeta. (cd "/c/Users.../Git")
+4.- Verifico que estoy en la ruta deseada con el comando GitBash(pwd)
+5.- Verifico que se encuentran los archivos a versionar(compartir) con el comando GitBash(ls -la)
+6.- Se inicializa el repositorio en esa carpeta con el comando (git init)
+7.- Se verifica el estado del repositorio con el comando (git status)
+8.- Se añade el archivo al área de preparación (staging)con el comando (git add nombre_del_archivo.ext)
+8a- Si quieres añadir todos los archivos de la carpeta utiliza el comando (git add .)
+9.- Crea el commit (versión inicial) con el comando (git commit -m "Versión inicial del archivo")
+10.-Conecta con un repositorio remoto (GitHub,GitLab,...) con los comandos (git remote add origin https://github.com/usuario/repositorio.git)(git push -u origin main)
+
+
