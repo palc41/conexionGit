@@ -1,5 +1,0 @@
-Documento de prueba para que dejar constancia de conexión y modificación exitosa de este repositorio.
-
-Escribe aquí tu nombre o mensaje personalizado.
-
-También puedes añadir un documento o archivo a la carpeta (registroVisitas) 
