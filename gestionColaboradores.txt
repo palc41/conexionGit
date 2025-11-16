@@ -1,0 +1,49 @@
+
+Hay dos opciones de colaboración, siendo añadidos como colaborador por el dueño del repositorio o como colaborador externo haciendo un fork (copia del repositorio en la cuenta personal del colaborador externo) y trabajando sobre la copia para solicitar un Pull Request que tendrá que ser aceptado pon el dueño del repositorio.
+
+
+Para que trabajen los colaboradores añadidos por el dueño del repositorio directamente se clona el repositorio "main" de la siguiente forma:
+
+* Desde fuera de la carpeta del repositorio (cd..) se clona el repositorio principal ("main") con la idea de crear una rama de colaborador para que se pueda trabajar sin tocar el "main" utilizo el comando (git clone https://github.com/palc41/conexionGit.git)
+** Entro en la carpeta del repositorio (cd conexionGit) y creo una rama llamada "colaborador"  utilizando el comando (git checkout -b colaborador)
+*** Envío la nueva rama a GitHub utilizando el comando (git push origin colaborador)
+
+
+
+                ┌─────────────────────────────┐
+                │   Propietario del repositorio          │
+                │   (tú: palc41/conexionGit)             │
+                └───────────────┬─────────────┘
+                                │
+                                │
+                ┌───────────────▼───────────────┐
+                │   Repositorio remoto en GitHub            │
+                │   (rama principal: main)                  │
+                └───────────────┬───────────────┘
+                                │
+        ┌───────────────────────┼────────────────────────┐
+        │                                │                                 │
+        ▼                                ▼                                ▼
+┌─────────────────┐     ┌─────────────────┐      ┌─────────────────┐
+│ Colaborador A          │     │ Colaborador B         │      │ Colaborador C         │
+│ (con acceso)           │     │ (con fork)            │      │ (con acceso)          │
+└───────┬─────────┘     └───────┬─────────┘      └───────┬─────────┘
+           │                              │                               │
+           │                              │                               │
+   git clone               fork en GitHub            git clone
+   git checkout -b rama     git clone fork           git checkout -b rama
+   git add / commit         git add / commit         git add / commit
+   git push origin rama     git push origin rama     git push origin rama
+        │                                │                                 │
+        └───────────────┬───────┴───────────────┬────────┘
+                              ▼                               ▼
+                Pull Request hacia repo   Pull Request hacia repo
+                original (palc41/main)    original (palc41/main)
+                        │                                │
+                        └──────────┬────────────┘
+                                       ▼
+                          Propietario revisa y fusiona
+                          (merge en rama main)
+
+
+

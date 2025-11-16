@@ -32,10 +32,8 @@ Aprovecho este archivo para recopilar los pasos seguidos para la configuración 
 14.- Si salio el error comentado en 13a,b,c volver a ejecutar el paso 13.-
 15.- Para actualizar siguientes versiones del mismo proyecto/repositorio comenzar con el comando (git status)
 16.- Continua con (git add .) para añadir todo lo nuevo de golpe o si es un documento solo ( git add nombre_del_archivo.ext) 
-17.- Crea un commit con la descripción de las modificaciones (git commit -m "Añadida carpeta registroVisitas con su archivo"
-)
-18.- Sube los cambios al remoto con  (git push
-)
+17.- Crea un commit con la descripción de las modificaciones (git commit -m "Añadida carpeta registroVisitas con su archivo")
+18.- Sube los cambios al remoto con  (git push)
 
 
 
