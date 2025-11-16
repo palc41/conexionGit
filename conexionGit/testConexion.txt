@@ -1,0 +1,41 @@
+Este es un archivo de prueba de conexión GIT
+
+Aprovecho este archivo para recopilar los pasos seguidos para la configuración desde cero.
+
+1.- Instalo en el PC el programa Git Bash (https://git-scm.com/install/windows)
+2.- Creo en la ruta deseada la carpeta que va a contener los archivos o carpetas que voy a versionar (compartir). En mi caso C:\Users\....\Git
+2a.- Se puede crear desde el entorno Windows
+2b.- Se puede crear desde la terminar GitBash de las siguiente forma: Desplazándose por el árbol de carpetas con el comando (cd nombreCarpeta) verificando el contenido de la carpeta actual con el comando (ls -la) creando el directorio deseado con el comando (mkdir nombreCarpetaDeseoCrear)
+3.- Desde el terminar de Git Bash accedo a la ruta de esa carpeta. (cd "/c/Users.../Git")
+4.- Verifico que estoy en la ruta deseada con el comando GitBash(pwd)
+5.- Verifico que se encuentran los archivos a versionar(compartir) con el comando GitBash(ls -la)
+6.- Se inicializa el repositorio en esa carpeta con el comando (git init)
+7.- Se verifica el estado del repositorio con el comando (git status)
+8.- Se añade el archivo al área de preparación (staging)con el comando (git add nombre_del_archivo.ext)
+8a- Si quieres añadir todos los archivos de la carpeta utiliza el comando (git add .)
+9.- Crea el commit (versión inicial) con el comando (git commit -m "Versión inicial del archivo")
+10.-Inicia sesión en tu cuenta de GitHub. 
+10a.-haz clic en el botón “+” → New repository.
+10b.-Repository name: el nombre que quieras (ej. prueba-git).
+10c.-Description: opcional.
+10d.-Public/Private: elige si quieres que sea visible para todos o solo para ti.
+10e.-Initialize with README: déjalo desmarcado si ya tienes tu carpeta con archivos.
+10f.-Haz clic en Create repository.
+11.- Verifica en que rama (main o master) del repositorio local esta tu proyecto con el comando (git branch) 
+12.- Si esta en "master" debes tenerlo en cuenta para el siguiente paso o puede renombrarlo a "main" para alinearlo con GitHub que usa "main"
+12a.-Para renombrar utiliza los comandos (git branch -M main)
+13.- Conecta con un repositorio remoto (GitHub,GitLab,...) con los comandos (git remote add origin https://github.com/usuario/repositorio.git)(git push -u origin [main ó master])
+13a.- Si el repositorio remoto tiene contenido que el repositorio local no tiene obtendremos un error (! [rejected] main -> main (fetch first) error: failed to push some refs to ...)
+13b.- Para solucionarlo hay que traer el contenido del repositorio remoto al repositorio local con el comando (git pull origin main --allow-unrelated-histories)
+13c.- Posiblemente aparecerá la ventana de editor de texto (Vim en Git Bash) para escribir un mensaje para el historiral del registro de versiones. Escribe algo que describa la accion del tipo ("Merge remoto con local"). Pulsa la tecla ESC para salir del editor. Escribe (:wq) y pulsa Enter para guardar y salir. w = guardar, q=salir. Para salir sin guardar (:q!) y Enter.
+
+14.- Si salio el error comentado en 13a,b,c volver a ejecutar el paso 13.-
+15.- Para actualizar siguientes versiones del mismo proyecto/repositorio comenzar con el comando (git status)
+16.- Continua con (git add .) para añadir todo lo nuevo de golpe o si es un documento solo ( git add nombre_del_archivo.ext) 
+17.- Crea un commit con la descripción de las modificaciones (git commit -m "Añadida carpeta registroVisitas con su archivo"
+)
+18.- Sube los cambios al remoto con  (git push
+)
+
+
+
