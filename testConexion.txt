@@ -14,6 +14,21 @@ Aprovecho este archivo para recopilar los pasos seguidos para la configuración 
 8.- Se añade el archivo al área de preparación (staging)con el comando (git add nombre_del_archivo.ext)
 8a- Si quieres añadir todos los archivos de la carpeta utiliza el comando (git add .)
 9.- Crea el commit (versión inicial) con el comando (git commit -m "Versión inicial del archivo")
-10.-Conecta con un repositorio remoto (GitHub,GitLab,...) con los comandos (git remote add origin https://github.com/usuario/repositorio.git)(git push -u origin main)
+10.-Inicia sesión en tu cuenta de GitHub. 
+10a.-haz clic en el botón “+” → New repository.
+10b.-Repository name: el nombre que quieras (ej. prueba-git).
+10c.-Description: opcional.
+10d.-Public/Private: elige si quieres que sea visible para todos o solo para ti.
+10e.-Initialize with README: déjalo desmarcado si ya tienes tu carpeta con archivos.
+10f.-Haz clic en Create repository.
+11.- Verifica en que rama (main o master) del repositorio local esta tu proyecto con el comando (git branch) 
+12.- Si esta en "master" debes tenerlo en cuenta para el siguiente paso o puede renombrarlo a "main" para alinearlo con GitHub que usa "main"
+12a.-Para renombrar utiliza los comandos (git branch -M main)
+13.- Conecta con un repositorio remoto (GitHub,GitLab,...) con los comandos (git remote add origin https://github.com/usuario/repositorio.git)(git push -u origin [main ó master])
+13a.- Si el repositorio remoto tiene contenido que el repositorio local no tiene obtendremos un error (! [rejected] main -> main (fetch first) error: failed to push some refs to ...)
+13b.- Para solucionarlo hay que traer el contenido del repositorio remoto al repositorio local con el comando (git pull origin main --allow-unrelated-histories)
+13c.- Posiblemente aparecerá la ventana de editor de texto (Vim en Git Bash) para escribir un mensaje para el historiral del registro de versiones. Escribe algo que describa la accion del tipo ("Merge remoto con local"). Pulsa la tecla ESC para salir del editor. Escribe (:wq) y pulsa Enter para guardar y salir.
+
+14.- Si salio el error comentado en 13a,b,c volver a ejecutar el paso 13.-
 
 
